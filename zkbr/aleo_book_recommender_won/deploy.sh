@@ -1,4 +1,4 @@
-APPNAME="aleo_book_recommender_won5431"
+APPNAME="aleo_book_recommender_won54312"
 ENV_FILE=".env"
 PRIVATE_KEY=$(grep "PRIVATE_KEY" $ENV_FILE | cut -d '=' -f2)
 
