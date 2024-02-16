@@ -9,7 +9,7 @@ export const MintPrivate = () => {
   const [amount, setAmount] = useState<number>(0);
 
   const handleMintPublic = async () => {
-    const mint_public_transition = new Transition(
+    const mint_private_transition = new Transition(
       "token_112233.aleo",
       "mint_private",
       [receiverAddress, amount.toString() + "u64"]
@@ -18,12 +18,12 @@ export const MintPrivate = () => {
     const mint_private_tx = new Transaction(
       publicKey!,
       WalletAdapterNetwork.Testnet,
-      [mint_public_transition],
+      [mint_private_transition],
       1000000, // set your desired fee
       false
     );
 
-    console.log("mint_public_tx:",mint_private_tx);
+    console.log("mint_private_tx:",mint_private_tx);
 
     if (requestTransaction) {
       try {
