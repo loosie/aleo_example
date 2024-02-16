@@ -1,0 +1,28 @@
+// The program input for store/src/main.leo
+[mint]
+receiver: address = aleo1uwr68zj0ml6dw6nqrnpt9zad3wfvrdzdtmjrqesj4qf67heztcyqg75vrw;
+amount: u64 = 10000u64;
+
+[add_item]
+item_id: u8 = 1u8;
+quantity: u64 = 10u64;
+price: u64 = 100u64;
+
+[buy]
+token: Token = Token {
+  owner: aleo1uwr68zj0ml6dw6nqrnpt9zad3wfvrdzdtmjrqesj4qf67heztcyqg75vrw,\
+  amount: 10000u64,
+  _nonce: 1695607089910352802771013590414929058114897561850772609210967897257482934055group
+};
+item_id: u8 = 1u8;
+quantity: u64 = 5u64;
+bill_amount: u64 = 50u64;
+
+[transfer_item]
+item: Item = Item {
+    owner: aleo1uwr68zj0ml6dw6nqrnpt9zad3wfvrdzdtmjrqesj4qf67heztcyqg75vrw.private,
+    item: 123u8.private,
+    quantity: 123u64.private,
+    _nonce: 6454746015393505811671401129091330549036205015618570235834391641324347085342group.public
+};
+receiver: address = aleo180hp9fhgm0v993vxmqw6te0l7293zed692t5cqtetxyv02dluc9qjke8ca
