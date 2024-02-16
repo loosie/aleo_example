@@ -113,7 +113,6 @@ leo run buy '{
 ViewKey를 가진 주인만 트랜잭션 결과 정보를 올바르게 복호화하여 사용할 수 있다. 즉, `Token`과 `Item`의 주인 외에는 프라이빗 스토어 프로그램 상에서의 활동에 대한 아무런 정보도 확인할 수 없다.
 
 
-
 ## Transfer Item
 transfer_item 함수 인자(parameter)
 - 아이템: 추가하고자 하는 아이템 정보
