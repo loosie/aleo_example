@@ -1,4 +1,4 @@
-APPNAME="hello_leo_374817061"
+APPNAME="hello_leo_won"
 
 ENV_FILE=".env"
 PRIVATEKEY=$(grep "PRIVATE_KEY" $ENV_FILE | cut -d '=' -f2)

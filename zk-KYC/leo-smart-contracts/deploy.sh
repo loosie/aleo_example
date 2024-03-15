@@ -1,14 +1,10 @@
-APPNAME="token_9991267"
-
+APPNAME="kyc_test90909"
 ENV_FILE=".env"
 PRIVATE_KEY=$(grep "PRIVATE_KEY" $ENV_FILE | cut -d '=' -f2)
-
-QUERY_URL="https://api.explorer.aleo.org/v1"
-BROADCAST_URL="${QUERY_URL}/testnet3/transaction/broadcast"
 
 snarkos developer deploy "${APPNAME}.aleo" \
   --path "./build/" \
   --private-key "${PRIVATE_KEY}" \
-  --query "${QUERY_URL}" \
+  --query "https://api.explorer.aleo.org/v1" \
   --priority-fee 3000000 \
-  --broadcast "${BROADCAST_URL}" \
+  --broadcast "https://api.explorer.aleo.org/v1/testnet3/transaction/broadcast" \

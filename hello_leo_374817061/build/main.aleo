@@ -1,4 +1,4 @@
-program hello_leo_374817061.aleo;
+program hello_leo_won.aleo;
 
 
 
