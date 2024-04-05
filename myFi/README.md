@@ -74,7 +74,7 @@ npm run dev
 8. private Transfer 
 record를 사용하여 직접 발행한 토큰 50개를 다른 유저에게 전송한다. 그러면 사용한 100개를 담고 있는 record는 사용되어 삭제되고, 새롭게 50개가 남은 나의 record와 50개를 새롭게 받은 상대방의 record가 2개 생성된다. 
 
-<img width="874" alt="스크린샷 2024-04-05 오후 9 34 36" src="https://github.com/loosie/aleo_example/assets/54282927/02ab27ab-18aa-4395-87f6-861889736247">
+<img width="1164" alt="스크린샷 2024-04-05 오후 10 36 51" src="https://github.com/loosie/aleo_example/assets/54282927/2bc8aa26-79fd-4f2c-b21c-6cc76b7d211f">
 
 
 ## Record based Defi?
@@ -88,4 +88,4 @@ Record와 같은 모델은 각 독립적으로 상호작용하기 때문에 Defi
 ## Resources
 - Aleo, [Records](https://developer.aleo.org/concepts/records/), Aleo Docs
 - Jaromir, [Understanding Cardano Extended-UTXO](https://forum.cardano.org/t/understanding-cardano-extended-utxo/101509), Cardano Forum
-JaniceyamGu, [Cardano의 UTxO 모델에서 확장의 의미 이해](https://forum.cardano.org/t/cardano-utxo/124504/1), Cardano forum
+- JaniceyamGu, [Cardano의 UTxO 모델에서 확장의 의미 이해](https://forum.cardano.org/t/cardano-utxo/124504/1), Cardano forum
