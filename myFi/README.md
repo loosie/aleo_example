@@ -26,6 +26,7 @@ Record는 Bitcoin의 결제 능력과 Cardano의 프로그래밍 가능성을 �
 ## How to get User Records?
 각 User의 Record는 Block에 기록되어 있다. 이를 가져오기 위해서는 전체 블록 또는 특정 블록 기준 설정을 통해서 온체인 쿼리를 하여 가져와야 한다. 현재 [aleo-sdk](https://github.com/AleoHQ/sdk/blob/testnet3/sdk/src/network-client.ts#L102)에 구현되어 있다. 현재는 aleo credits만 조회가 가능하며, 추후 token의 표준, 사용성에 따라 그에 맞는 record 쿼리 메서드가 나올 것으로 보인다. 
 
+<img width="778" alt="스크린샷 2024-04-05 오후 9 24 08" src="https://github.com/loosie/aleo_example/assets/54282927/1cf96ccd-d8be-4694-b8e4-441b62c92f18">
 
 ## Privte Transfer Example
 해당 Repository에서는 local token program 코드를 사용해서 erc20-like record token을 직접 발행하고 private하게 transfer를 할 수 있는 예제 샘플을 만들었다. 
@@ -56,9 +57,11 @@ npm run dev
 
 5. generate Account
 임의의 Account를 로컬에서 생성한다.
+```
 - accountId
 - privateKey
 - viewKey
+```
 
 6. select Token & mint 
 원하는 token을 선택한 후에 직접 토큰을 총 100개를 발행한다. 
@@ -71,14 +74,18 @@ npm run dev
 8. private Transfer 
 record를 사용하여 직접 발행한 토큰 50개를 다른 유저에게 전송한다. 그러면 사용한 100개를 담고 있는 record는 사용되어 삭제되고, 새롭게 50개가 남은 나의 record와 50개를 새롭게 받은 상대방의 record가 2개 생성된다. 
 
+<img width="874" alt="스크린샷 2024-04-05 오후 9 34 36" src="https://github.com/loosie/aleo_example/assets/54282927/02ab27ab-18aa-4395-87f6-861889736247">
 
-# What's Next?
+
+## Record based Defi?
 Record와 같은 모델은 각 독립적으로 상호작용하기 때문에 Defi를 만들 때 많은 고민이 필요하다. Cardano 생태계를 예시로 들여다보자. 
-- https://adapulse.io/cardano-swaps-a-dex-that-taps-into-the-full-potential-of-the-eutxo-model/
-- cardano batcher: https://forum.cardano.org/t/cardano-batcher/123312
+- 어떻게 record를 스왑하고 많은 주문을 처리하기 위해서는? [cardano batcher](https://forum.cardano.org/t/cardano-batcher/123312)를 공부해보자
 - utxo-like AMM is good?: https://github.com/fallen-icarus/cardano-swaps
 
-# Resources
-- Aleo Docs, [Records](https://developer.aleo.org/concepts/records/)
-- JaniceyamGu, [Cardano의 UTxO 모델에서 확장의 의미 이해](https://forum.cardano.org/t/cardano-utxo/124504/1), Cardano forum
-- 
+현재 Aleo 생테계에는 Private-centrict Dex Arcane Finance가 Uniswap과 같은 AMM 모델을 사용하고 있다.
+- 참고: https://testnet3.aleoscan.io/address?a=aleo1mqdnfnjxnpfdkyzewqsup45sw37g3ssyndxg7nt7hgssm7zx3vxslknm3p
+
+## Resources
+- Aleo, [Records](https://developer.aleo.org/concepts/records/), Aleo Docs
+- Jaromir, [Understanding Cardano Extended-UTXO](https://forum.cardano.org/t/understanding-cardano-extended-utxo/101509), Cardano Forum
+JaniceyamGu, [Cardano의 UTxO 모델에서 확장의 의미 이해](https://forum.cardano.org/t/cardano-utxo/124504/1), Cardano forum
