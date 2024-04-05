@@ -71,7 +71,7 @@ const WalletToolBox = () => {
       <Button onClick={() => handleTransitionSelection("mint_public")}>Mint Public</Button>
       <Button onClick={() => handleTransitionSelection("mint_private")}>Mint Private</Button>
       <Button onClick={() => handleTransitionSelection("transfer_public")}>Transfer Public</Button>
-      <Button onClick={() => handleTransitionSelection("transfer_private")} disabled>Transfer Private</Button>
+      <Button onClick={() => handleTransitionSelection("transfer_private")}>Transfer Private</Button>
 
       {selectedTransition && <TransitionComponent transition={selectedTransition} />}
     </div>
@@ -101,7 +101,7 @@ const TransferPrivateToPublic: React.FC = () => {
   // ... (implementation for TransferPrivateToPublic)
   return (
     <div>
-      
+
     </div>
   );
 };
@@ -110,7 +110,7 @@ const TransferPublicToPrivate: React.FC = () => {
   // ... (implementation for TransferPublicToPrivate)
   return (
     <div>
-      
+
     </div>
   );
 };
