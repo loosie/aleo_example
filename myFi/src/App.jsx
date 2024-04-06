@@ -1,5 +1,5 @@
 import { useState } from "react";
-import aleoLogo from "./assets/aleo.svg";
+import myfiLogo from "./assets/myfi.png";
 import "./App.css";
 import token_program from "../token/build/main.aleo?raw";
 import { AleoWorker } from "./workers/AleoWorker.js";
@@ -59,27 +59,27 @@ function App() {
     }`;
 
     console.log(jsonString);
-    // const result = await aleoWorker.localProgramExecution(
-    //   userKey,
-    //   token_program,
-    //   "mint",
-    //   [tokenData.id, userAccount.address().to_string(), "100u64", jsonString],
-    // );
+    const result = await aleoWorker.localProgramExecution(
+      userKey,
+      token_program,
+      "mint",
+      [tokenData.id, userAccount.address().to_string(), "100u64", jsonString],
+    );
 
-    // const newRecord = parseMintTokenResult(result[0]);
+    const newRecord = parseMintTokenResult(result[0]);
 
     // mock data
-    const newRecord = {
-      owner: userAccount.address().to_string() + '.private',
-      amount: '100u64.private',
-      id: tokenData.id + '.private',
-      _nonce: '6678733339473846553397983115761500889346961254374227042523066233470754662400group.public'
-    };
-    console.log('newRecord:', newRecord);
+    // const newRecord = {
+    //   owner: userAccount.address().to_string() + '.private',
+    //   amount: '100u64.private',
+    //   id: tokenData.id + '.private',
+    //   _nonce: '6678733339473846553397983115761500889346961254374227042523066233470754662400group.public'
+    // };
+    // console.log('newRecord:', newRecord);
     records.push(newRecord);
     setRecords(records);
 
-    // alert(result);
+    alert(result);
     setTimeout(() => {
       setExecuting(false);
     }, 1000)
@@ -140,7 +140,7 @@ function App() {
     <>
       <div>
         <a href="https://aleo.org" target="_blank">
-          <img src={aleoLogo} className="logo" alt="Aleo logo" />
+          <img src={myfiLogo} className="logo" alt="Myfi logo" />
         </a>
       </div>
       <h1>MyFi</h1>
