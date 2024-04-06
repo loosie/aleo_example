@@ -92,6 +92,11 @@ Models like Record require a lot of thought when building Defi because they inte
 - How do you swap records and fulfill many orders? let's study [cardano batcher](https://forum.cardano.org/t/cardano-batcher/123312)
 - utxo-like AMM is good?: https://github.com/fallen-icarus/cardano-swaps
 
+Consider a DEX that populates LPs with utxo-like tokens. 
+- When multiple swaps occur, it can cause a major bottleneck if they all try to use the same UTXO. 
+- That's why the Cardano ecosystem uses batchers to bundle multiple transactions into one large batch for processing. This prevents conflicts that can occur when multiple swap transactions access the liquidity pool at the same time in the eUTXO model.
+- The problem with Batcher is centralization and reliability. Like Ethereum Bundler
+
 Currently, the Aleo ecosystem has a private-centric Dex, Arcane Finance, that uses an AMM model like Uniswap.
 - ref: https://testnet3.aleoscan.io/address?a=aleo1mqdnfnjxnpfdkyzewqsup45sw37g3ssyndxg7nt7hgssm7zx3vxslknm3p
 
